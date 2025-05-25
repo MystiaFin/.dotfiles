@@ -1,0 +1,179 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  --bg-dark: #1E1E2E;      /* Catppuccin Mocha dark background */
+  --bg-light: #CDD6F4;     /* Catppuccin Mocha light background */
+  --fg-dark: #A6ADC8;      /* Catppuccin Mocha foreground */
+  --fg-light: #CDD6F4;     /* Catppuccin Mocha light foreground */
+  --accent: #F9E2AF;       /* Catppuccin Mocha yellow accent */
+  --error: #F38BA8;        /* Catppuccin Mocha red for errors */
+  --good: #A6E3A1;         /* Catppuccin Mocha green */
+  --highlight: #F9E2AF;    /* Catppuccin Mocha yellow for highlights */
+  --border: #45475A;       /* Catppuccin Mocha border color */
+  --bg0-hard: #181825;     /* Catppuccin Mocha darker background */
+  --bg1: #313244;          /* Catppuccin Mocha medium background */
+}
+
+i {
+  color: var(--fg-light);
+  margin-right: 7px;
+}
+
+body {
+  color: var(--fg-light);
+  font-family: "RobotoMono Nerd Font", ui-monospace, monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: transparent;
+}
+
+#root {
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding-top: 2px;
+  padding-right: 6px;
+  padding-left: 6px;
+  background: transparent;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  background-color: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  justify-self: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: 700;
+}
+
+.right {
+  justify-self: end;
+  background-color: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  padding-top: 5.5px; 
+  padding-bottom: 5.5px;
+  padding-right: 30px;
+  padding-left: 20px;
+  font-weight: 600;
+  gap: 1.5rem;
+}
+.center .music {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.right .stuff {
+  display: flex;
+  align-items: center;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.network,
+.memory,
+.cpu,
+.battery {
+  margin-right: 12px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+  gap: 2;
+  background-color: var(--bg-dark);
+  border: 2px solid var(--border);
+  border-radius: 15px;
+}
+
+.workspaces i {
+  margin-left: 25px;
+  margin-right: 20px;
+}
+
+.workspace {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 5px;
+  height: 12px;
+  padding: 6px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: var(--bg1);
+  
+  &.displayed {
+    background: var(--bg0-hard);
+  }
+  
+  &.focused,
+  &:hover {
+    background: var(--accent);
+  }
+}
+
+.binding-mode,
+.tiling-direction {
+  background: var(--bg1);
+  color: var(--fg-light);
+  border-radius: 2px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: var(--error);
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}
+
+.date {
+  margin-right: 10px;
+}
+
+.media-icon {
+  font-size: 16px;
+  margin-right: 4px;
+}
